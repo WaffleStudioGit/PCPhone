@@ -139,7 +139,7 @@ def build():
             Inches(3.3),
             Inches(11),
             Inches(0.9),
-            "Dark Gruvbox Hyprland on the Framework 13 Pro — HiDPI, brightness,\nfingerprint, and battery tuned for this machine.\nTwo levels: build with AI  ·  or install binnewbs/arch-hyprland",
+            "Dark Gruvbox Hyprland on the Framework 13 Pro — HiDPI, brightness,\nfingerprint, and battery tuned for this machine.\nTwo levels: Level 1 prebuilt arch-hyprland  ·  Level 2 DIY with AI",
             size=18,
             color=FG_DIM,
         )
@@ -181,29 +181,10 @@ def build():
         panel(slide, Inches(0.7), Inches(1.9), Inches(5.7), Inches(4.5), BG_PANEL)
         accent_bar(slide, ORANGE, left=Inches(0.7), top=Inches(1.9), width=Inches(5.7), height=Inches(0.12))
         add_textbox(slide, Inches(0.95), Inches(2.25), Inches(5.2), Inches(0.35), "LEVEL 1", size=14, color=ORANGE, bold=True)
-        add_textbox(slide, Inches(0.95), Inches(2.65), Inches(5.2), Inches(0.5), "Make your own rice with AI", size=22, color=FG, bold=True)
+        add_textbox(slide, Inches(0.95), Inches(2.65), Inches(5.2), Inches(0.5), "Prebuilt: arch-hyprland", size=22, color=FG, bold=True)
         bullet_block(
             slide,
             Inches(0.95),
-            Inches(3.3),
-            Inches(5.2),
-            Inches(2.8),
-            [
-                "Tune scale, brightness, fingerprint yourself",
-                "Cursor helps write Hyprland / Waybar diffs",
-                "Learn the Framework ArchWiki quirks",
-                "Ship your own FW13 Pro dotfiles",
-            ],
-            size=15,
-            bullet_color=ORANGE,
-        )
-        panel(slide, Inches(6.85), Inches(1.9), Inches(5.7), Inches(4.5), BG_PANEL)
-        accent_bar(slide, AQUA, left=Inches(6.85), top=Inches(1.9), width=Inches(5.7), height=Inches(0.12))
-        add_textbox(slide, Inches(7.1), Inches(2.25), Inches(5.2), Inches(0.35), "LEVEL 2", size=14, color=AQUA, bold=True)
-        add_textbox(slide, Inches(7.1), Inches(2.65), Inches(5.2), Inches(0.5), "Use arch-hyprland", size=22, color=FG, bold=True)
-        bullet_block(
-            slide,
-            Inches(7.1),
             Inches(3.3),
             Inches(5.2),
             Inches(2.8),
@@ -212,6 +193,25 @@ def build():
                 "Matugen + swww theme engine ready",
                 "Then patch monitor scale for 2.8K",
                 "Fix home paths + Framework scripts",
+            ],
+            size=15,
+            bullet_color=ORANGE,
+        )
+        panel(slide, Inches(6.85), Inches(1.9), Inches(5.7), Inches(4.5), BG_PANEL)
+        accent_bar(slide, AQUA, left=Inches(6.85), top=Inches(1.9), width=Inches(5.7), height=Inches(0.12))
+        add_textbox(slide, Inches(7.1), Inches(2.25), Inches(5.2), Inches(0.35), "LEVEL 2", size=14, color=AQUA, bold=True)
+        add_textbox(slide, Inches(7.1), Inches(2.65), Inches(5.2), Inches(0.5), "Make your own with AI", size=22, color=FG, bold=True)
+        bullet_block(
+            slide,
+            Inches(7.1),
+            Inches(3.3),
+            Inches(5.2),
+            Inches(2.8),
+            [
+                "Tune scale, brightness, fingerprint yourself",
+                "Cursor helps write Hyprland / Waybar diffs",
+                "Learn the Framework ArchWiki quirks",
+                "Ship your own FW13 Pro dotfiles",
             ],
             size=15,
             bullet_color=AQUA,
@@ -301,7 +301,7 @@ def build():
             Inches(5.95),
             Inches(12),
             Inches(0.5),
-            "Tip: if fonts look huge/tiny after Level 2, this monitor line is usually the first fix.",
+            "Tip: if fonts look huge/tiny after Level 1 (prebuilt rice), this monitor line is usually the first fix.",
             size=15,
             color=YELLOW,
         )
@@ -371,7 +371,7 @@ def build():
             ("Kitty", "GPU terminal with Gruvbox / Matugen colors", AQUA),
             ("Rofi", "Launcher + wallpaper picker", BLUE),
             ("SwayNC", "Notifications / quick settings", PURPLE),
-            ("swww + Matugen", "Wallpaper + auto theme (Level 2 secret sauce)", GREEN),
+            ("swww + Matugen", "Wallpaper + auto theme (Level 1 prebuilt secret sauce)", GREEN),
             ("hyprlock / hypridle / brightnessctl", "Lock, idle, and Fn brightness on battery", RED),
         ]
         y = Inches(1.7)
@@ -396,7 +396,7 @@ def build():
             Inches(1.55),
             Inches(12),
             Inches(0.4),
-            "Lock these hex values for DIY, or let Matugen derive a matching set from wallpaper (Level 2).",
+            "Level 1: Matugen derives colors from wallpaper. Level 2 DIY: lock these Gruvbox hex values by hand.",
             size=15,
             color=FG_DIM,
         )
@@ -432,108 +432,23 @@ def build():
         fill_slide(slide)
         accent_bar(slide, ORANGE, height=Inches(0.2))
         add_textbox(slide, Inches(0.9), Inches(2.2), Inches(11), Inches(0.4), "LEVEL 1  ·  FRAMEWORK 13 PRO", size=16, color=ORANGE, bold=True)
-        add_textbox(slide, Inches(0.9), Inches(2.75), Inches(11.5), Inches(1.0), "Make your own rice with AI", size=40, color=FG, bold=True)
+        add_textbox(slide, Inches(0.9), Inches(2.75), Inches(11.5), Inches(1.0), "Prebuilt: binnewbs/arch-hyprland", size=36, color=FG, bold=True)
         add_textbox(
             slide,
             Inches(0.9),
             Inches(4.0),
             Inches(11),
             Inches(0.9),
-            "You own every config. Cursor writes the diffs while you dial in\nscale, battery, and Gruvbox for this laptop.",
+            "Start here. Drop in the Matugen rice, then patch it for Framework HiDPI,\nhome paths, brightness, and fingerprint.",
             size=18,
             color=FG_DIM,
         )
         footer(slide, n, total)
 
-    def level1_steps(slide, n, total):
+    def level1_look(slide, n, total):
         fill_slide(slide)
         accent_bar(slide, ORANGE)
-        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 1 · WORKFLOW", ORANGE)
-        add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.55), "Build loop on the 13 Pro", size=30, color=FG, bold=True)
-        steps = [
-            ("01", "Install Arch + firmware", "fwupdmgr get-updates; confirm Wi-Fi + graphics"),
-            ("02", "Hyprland bare metal", "Terminal + keybinds first — then scale the eDP panel"),
-            ("03", "Laptop controls", "brightnessctl, hypridle/hyprlock, battery in Waybar"),
-            ("04", "Lock Gruvbox", "Kitty + Waybar + borders on the same palette"),
-            ("05", "Iterate with AI", "Paste hyprctl monitors, errors, screenshots to Cursor"),
-            ("06", "Commit FW13 dots", "Keep hypr / waybar / kitty in git for the next mainboard"),
-        ]
-        y = Inches(1.7)
-        for num, title, body in steps:
-            add_textbox(slide, Inches(0.7), y, Inches(0.7), Inches(0.4), num, size=18, color=ORANGE, bold=True)
-            add_textbox(slide, Inches(1.5), y, Inches(3.8), Inches(0.4), title, size=16, color=FG, bold=True)
-            add_textbox(slide, Inches(5.5), y, Inches(7), Inches(0.4), body, size=15, color=FG_DIM)
-            y += Inches(0.75)
-        footer(slide, n, total)
-
-    def level1_packages(slide, n, total):
-        fill_slide(slide)
-        accent_bar(slide, ORANGE)
-        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 1 · PACKAGES", ORANGE)
-        add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.55), "Starter set for Framework + Hyprland", size=28, color=FG, bold=True)
-        code_block(
-            slide,
-            Inches(0.7),
-            Inches(1.7),
-            Inches(12),
-            Inches(4.7),
-            [
-                "sudo pacman -S hyprland waybar kitty rofi-wayland swww \\",
-                "  hyprlock hypridle grim slurp wl-clipboard brightnessctl \\",
-                "  playerctl pipewire wireplumber networkmanager \\",
-                "  fprintd power-profiles-daemon fwupd \\",
-                "  ttf-jetbrains-mono-nerd noto-fonts-emoji",
-                "",
-                "yay -S swaync-git wlogout matugen-bin   # optional polish",
-                "",
-                "# Then: set eDP-1 scale, bind brightnessctl, enroll fingerprint,",
-                "# and only after that chase the Gruvbox look.",
-            ],
-            size=15,
-        )
-        footer(slide, n, total)
-
-    def level1_prompts(slide, n, total):
-        fill_slide(slide)
-        accent_bar(slide, ORANGE)
-        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 1 · AI PROMPTS", ORANGE)
-        add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.55), "Prompts that mention the Framework", size=28, color=FG, bold=True)
-        prompts = [
-            "“Framework 13 Pro 2.8K — write a Hyprland monitor line for 2880x1920@120 with ~1.67 scale.”",
-            "“Bind XF86MonBrightnessUp/Down to brightnessctl on Hyprland; Waybar show battery + backlight.”",
-            "“Gruvbox Dark for kitty + waybar; laptop rice, not desktop — keep contrast readable outdoors.”",
-            "“Add hypridle + hyprlock using my current wallpaper symlink; lock after 5 min on battery.”",
-            "“Here’s hyprctl monitors and my config — fix blurry XWayland apps after fractional scaling.”",
-        ]
-        y = Inches(1.7)
-        for i, text in enumerate(prompts, 1):
-            panel(slide, Inches(0.7), y, Inches(12), Inches(0.85), BG_PANEL)
-            add_textbox(slide, Inches(0.95), y + Inches(0.22), Inches(0.5), Inches(0.4), f"{i}.", size=16, color=ORANGE, bold=True)
-            add_textbox(slide, Inches(1.4), y + Inches(0.18), Inches(11), Inches(0.55), text, size=14, color=FG)
-            y += Inches(0.95)
-        footer(slide, n, total)
-
-    def level2_divider(slide, n, total):
-        fill_slide(slide)
-        accent_bar(slide, AQUA, height=Inches(0.2))
-        add_textbox(slide, Inches(0.9), Inches(2.2), Inches(11), Inches(0.4), "LEVEL 2  ·  FRAMEWORK 13 PRO", size=16, color=AQUA, bold=True)
-        add_textbox(slide, Inches(0.9), Inches(2.75), Inches(11.5), Inches(1.0), "Use binnewbs/arch-hyprland", size=38, color=FG, bold=True)
-        add_textbox(
-            slide,
-            Inches(0.9),
-            Inches(4.0),
-            Inches(11),
-            Inches(0.9),
-            "Drop in the Matugen rice, then patch it for Framework HiDPI,\nhome paths, brightness, and fingerprint.",
-            size=18,
-            color=FG_DIM,
-        )
-        footer(slide, n, total)
-
-    def level2_look(slide, n, total):
-        fill_slide(slide)
-        accent_bar(slide, AQUA)
-        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 2 · LOOK", AQUA)
+        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 1 · LOOK", ORANGE)
         add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.5), "What you’re installing (then adapting)", size=28, color=FG, bold=True)
         img1, img2 = ASSETS / "rice1.png", ASSETS / "rice2.png"
         if img1.exists():
@@ -552,10 +467,10 @@ def build():
         )
         footer(slide, n, total)
 
-    def level2_install(slide, n, total):
+    def level1_install(slide, n, total):
         fill_slide(slide)
-        accent_bar(slide, AQUA)
-        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 2 · INSTALL", AQUA)
+        accent_bar(slide, ORANGE)
+        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 1 · INSTALL", ORANGE)
         add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.5), "Clone, then Framework-patch", size=28, color=FG, bold=True)
         code_block(
             slide,
@@ -584,14 +499,14 @@ def build():
                 "Run wppicker / matugen image after packages are installed",
             ],
             size=15,
-            bullet_color=AQUA,
+            bullet_color=ORANGE,
         )
         footer(slide, n, total)
 
-    def level2_matugen(slide, n, total):
+    def level1_matugen(slide, n, total):
         fill_slide(slide)
-        accent_bar(slide, AQUA)
-        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 2 · SECRET SAUCE", AQUA)
+        accent_bar(slide, ORANGE)
+        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 1 · SECRET SAUCE", ORANGE)
         add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.5), "Matugen + swww on a laptop", size=28, color=FG, bold=True)
         add_textbox(
             slide,
@@ -618,17 +533,102 @@ def build():
             x += Inches(3.15)
         footer(slide, n, total)
 
+    def level2_divider(slide, n, total):
+        fill_slide(slide)
+        accent_bar(slide, AQUA, height=Inches(0.2))
+        add_textbox(slide, Inches(0.9), Inches(2.2), Inches(11), Inches(0.4), "LEVEL 2  ·  FRAMEWORK 13 PRO", size=16, color=AQUA, bold=True)
+        add_textbox(slide, Inches(0.9), Inches(2.75), Inches(11.5), Inches(1.0), "Make your own rice with AI", size=40, color=FG, bold=True)
+        add_textbox(
+            slide,
+            Inches(0.9),
+            Inches(4.0),
+            Inches(11),
+            Inches(0.9),
+            "Go deeper. You own every config. Cursor writes the diffs while you dial in\nscale, battery, and Gruvbox for this laptop.",
+            size=18,
+            color=FG_DIM,
+        )
+        footer(slide, n, total)
+
+    def level2_steps(slide, n, total):
+        fill_slide(slide)
+        accent_bar(slide, AQUA)
+        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 2 · WORKFLOW", AQUA)
+        add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.55), "Build loop on the 13 Pro", size=30, color=FG, bold=True)
+        steps = [
+            ("01", "Install Arch + firmware", "fwupdmgr get-updates; confirm Wi-Fi + graphics"),
+            ("02", "Hyprland bare metal", "Terminal + keybinds first — then scale the eDP panel"),
+            ("03", "Laptop controls", "brightnessctl, hypridle/hyprlock, battery in Waybar"),
+            ("04", "Lock Gruvbox", "Kitty + Waybar + borders on the same palette"),
+            ("05", "Iterate with AI", "Paste hyprctl monitors, errors, screenshots to Cursor"),
+            ("06", "Commit FW13 dots", "Keep hypr / waybar / kitty in git for the next mainboard"),
+        ]
+        y = Inches(1.7)
+        for num, title, body in steps:
+            add_textbox(slide, Inches(0.7), y, Inches(0.7), Inches(0.4), num, size=18, color=AQUA, bold=True)
+            add_textbox(slide, Inches(1.5), y, Inches(3.8), Inches(0.4), title, size=16, color=FG, bold=True)
+            add_textbox(slide, Inches(5.5), y, Inches(7), Inches(0.4), body, size=15, color=FG_DIM)
+            y += Inches(0.75)
+        footer(slide, n, total)
+
+    def level2_packages(slide, n, total):
+        fill_slide(slide)
+        accent_bar(slide, AQUA)
+        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 2 · PACKAGES", AQUA)
+        add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.55), "Starter set for Framework + Hyprland", size=28, color=FG, bold=True)
+        code_block(
+            slide,
+            Inches(0.7),
+            Inches(1.7),
+            Inches(12),
+            Inches(4.7),
+            [
+                "sudo pacman -S hyprland waybar kitty rofi-wayland swww \\",
+                "  hyprlock hypridle grim slurp wl-clipboard brightnessctl \\",
+                "  playerctl pipewire wireplumber networkmanager \\",
+                "  fprintd power-profiles-daemon fwupd \\",
+                "  ttf-jetbrains-mono-nerd noto-fonts-emoji",
+                "",
+                "yay -S swaync-git wlogout matugen-bin   # optional polish",
+                "",
+                "# Then: set eDP-1 scale, bind brightnessctl, enroll fingerprint,",
+                "# and only after that chase the Gruvbox look.",
+            ],
+            size=15,
+        )
+        footer(slide, n, total)
+
+    def level2_prompts(slide, n, total):
+        fill_slide(slide)
+        accent_bar(slide, AQUA)
+        section_chip(slide, Inches(0.7), Inches(0.55), "LEVEL 2 · AI PROMPTS", AQUA)
+        add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.55), "Prompts that mention the Framework", size=28, color=FG, bold=True)
+        prompts = [
+            "“Framework 13 Pro 2.8K — write a Hyprland monitor line for 2880x1920@120 with ~1.67 scale.”",
+            "“Bind XF86MonBrightnessUp/Down to brightnessctl on Hyprland; Waybar show battery + backlight.”",
+            "“Gruvbox Dark for kitty + waybar; laptop rice, not desktop — keep contrast readable outdoors.”",
+            "“Add hypridle + hyprlock using my current wallpaper symlink; lock after 5 min on battery.”",
+            "“Here’s hyprctl monitors and my config — fix blurry XWayland apps after fractional scaling.”",
+        ]
+        y = Inches(1.7)
+        for i, text in enumerate(prompts, 1):
+            panel(slide, Inches(0.7), y, Inches(12), Inches(0.85), BG_PANEL)
+            add_textbox(slide, Inches(0.95), y + Inches(0.22), Inches(0.5), Inches(0.4), f"{i}.", size=16, color=AQUA, bold=True)
+            add_textbox(slide, Inches(1.4), y + Inches(0.18), Inches(11), Inches(0.55), text, size=14, color=FG)
+            y += Inches(0.95)
+        footer(slide, n, total)
+
     def compare(slide, n, total):
         fill_slide(slide)
         accent_bar(slide, PURPLE)
         section_chip(slide, Inches(0.7), Inches(0.55), "PICK A LANE", PURPLE)
         add_textbox(slide, Inches(0.7), Inches(1.0), Inches(12), Inches(0.5), "Level 1 vs Level 2 on Framework 13 Pro", size=28, color=FG, bold=True)
-        headers = ["", "Level 1 · DIY + AI", "Level 2 · arch-hyprland"]
+        headers = ["", "Level 1 · arch-hyprland", "Level 2 · DIY + AI"]
         rows = [
-            ("Speed to pretty UI", "Slower", "Fast — then patch scale"),
-            ("FW13 Pro quirks", "You wire them first", "Must add after clone"),
-            ("Learning", "Highest", "Medium"),
-            ("Best when…", "You want a signature FW rice", "You want this look tonight"),
+            ("Speed to pretty UI", "Fast — then patch scale", "Slower"),
+            ("FW13 Pro quirks", "Must add after clone", "You wire them first"),
+            ("Learning", "Medium", "Highest"),
+            ("Best when…", "You want this look tonight", "You want a signature FW rice"),
         ]
         add_textbox(slide, Inches(0.8), Inches(1.7), Inches(3.5), Inches(0.4), headers[0], size=14, color=GRAY, bold=True)
         add_textbox(slide, Inches(4.4), Inches(1.7), Inches(4), Inches(0.4), headers[1], size=16, color=ORANGE, bold=True)
@@ -672,7 +672,7 @@ def build():
         links = [
             ("Framework 13 Pro", "https://frame.work/laptop13pro"),
             ("ArchWiki · Framework 13", "https://wiki.archlinux.org/title/Framework_Laptop_13"),
-            ("Level 2 rice", "https://github.com/binnewbs/arch-hyprland"),
+            ("Level 1 rice", "https://github.com/binnewbs/arch-hyprland"),
             ("Hyprland wiki", "https://wiki.hyprland.org"),
             ("Gruvbox", "https://github.com/morhetz/gruvbox"),
             ("Matugen", "https://github.com/InioX/matugen"),
@@ -697,7 +697,7 @@ def build():
             Inches(3.9),
             Inches(11),
             Inches(1.1),
-            "Level 1 — design with AI until scale, power, and Gruvbox feel native.\nLevel 2 — start from arch-hyprland, then patch for this Framework.",
+            "Level 1 — start from arch-hyprland, then patch for this Framework.\nLevel 2 — design with AI until scale, power, and Gruvbox feel native.",
             size=17,
             color=FG_DIM,
         )
@@ -723,13 +723,13 @@ def build():
         stack,
         palette,
         level1_divider,
-        level1_steps,
-        level1_packages,
-        level1_prompts,
+        level1_look,
+        level1_install,
+        level1_matugen,
         level2_divider,
-        level2_look,
-        level2_install,
-        level2_matugen,
+        level2_steps,
+        level2_packages,
+        level2_prompts,
         compare,
         checklist,
         resources,
